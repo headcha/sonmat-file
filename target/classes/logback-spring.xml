@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <springProfile name="local">
+        <include resource="org/springframework/boot/logging/logback/base.xml" />
+
+        <root level="DEBUG" />
+		<logger name="org.springframework.web.servlet" level="DEBUG" /> <!-- for HTTP stack traces -->        
+    </springProfile>
+
+
+    <springProfile name="real">
+        <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+        <springProperty scope="context" name="instance.name" source="instance.name" />
+
+        <appender name="dailyRolling" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${HOME}/deploy/sonmat/file/logs/sonmat-file.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${HOME}/deploy/sonmat/file/logs/sonmat-file-%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>7</maxHistory>
+            </rollingPolicy>
+            <encoder>
+                <!-- Reuse Spring Boot default pattern (https://github.com/spring-projects/spring-boot/blob/master/spring-boot/src/main/resources/org/springframework/boot/logging/logback/defaults.xml) -->
+                <pattern>${FILE_LOG_PATTERN}</pattern>
+            </encoder>
+        </appender>
+
+        <root level="INFO">
+            <appender-ref ref="dailyRolling" />
+        </root>
+    </springProfile>
+</configuration>
