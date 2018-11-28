@@ -1,40 +1,99 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Eclipse template
+*.pydevproject
+.metadata
 .gradle
-/build/
-/out/
-!gradle/wrapper/gradle-wrapper.jar
 bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
+# Eclipse Core
 .project
-.settings
-.springBeans
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# TeXlipse plugin
+.texlipse
+### JetBrains template
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
+
 *.iml
+
+## Directory-based project format:
+.idea/
+# if you remove the above rule, at least ignore the following:
+
+# User-specific stuff:
+# .idea/workspace.xml
+# .idea/tasks.xml
+# .idea/dictionaries
+
+# Sensitive or high-churn files:
+# .idea/dataSources.ids
+# .idea/dataSources.xml
+# .idea/sqlDataSources.xml
+# .idea/dynamic.xml
+# .idea/uiDesigner.xml
+
+# Gradle:
+# .idea/gradle.xml
+# .idea/libraries
+
+# Mongo Explorer plugin:
+# .idea/mongoSettings.xml
+
+## File-based project format:
 *.ipr
+*.iws
 
-### NetBeans ###
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-.nb-gradle/
+## Plugin-specific files:
 
-# Mac OS
-.DS_Store
+# IntelliJ
+/out/
 
-# Javascript Package Manager
-node_modules/
-bower_components/
+# mpeltonen/sbt-idea plugin
+.idea_modules/
 
-# FrontEnd Output
-.tmp/
+# JIRA plugin
+atlassian-ide-plugin.xml
 
-src/main/resources/web/src/scripts/templates.js
-src/main/resources/web/src/scripts/pages/meta/index.js
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+### Maven template
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+node_modules
