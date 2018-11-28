@@ -13,23 +13,10 @@ public class FileUploadErrorResponse implements ErrorResponse {
     @ApiModelProperty(notes = "디버깅 메세지" , example = "파일 사이즈 제한")
     private String message;
 
-    public static FileUploadErrorResponse createNotAllowMimeType(String message) {
-        FileUploadErrorResponse response = new FileUploadErrorResponse();
-        response.code = FileUploadErrorCode.not_allow_mime_type;
-        response.message = message;
-        return response;
-    }
 
-    public static FileUploadErrorResponse createSizeZero(String message) {
+    public static Object createError(String message) {
         FileUploadErrorResponse response = new FileUploadErrorResponse();
-        response.code = FileUploadErrorCode.file_size_is_zero;
-        response.message = message;
-        return response;
-    }
-
-    public static FileUploadErrorResponse createSizeOver(String message) {
-        FileUploadErrorResponse response = new FileUploadErrorResponse();
-        response.code = FileUploadErrorCode.file_size_over;
+        response.code = FileUploadErrorCode.error;
         response.message = message;
         return response;
     }

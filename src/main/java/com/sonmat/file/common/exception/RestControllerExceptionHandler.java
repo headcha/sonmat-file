@@ -68,6 +68,6 @@ public class RestControllerExceptionHandler extends ResponseEntityExceptionHandl
         logger.error("handleSizeExceededException", ex);
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON_UTF8);
-        return new ResponseEntity(FileUploadErrorResponse.createSizeOver(ex.getMessage()), headers, HttpStatus.PAYLOAD_TOO_LARGE);
+        return new ResponseEntity(FileUploadErrorResponse.createError(ex.getMessage()), headers, HttpStatus.PAYLOAD_TOO_LARGE);
     }
 }
